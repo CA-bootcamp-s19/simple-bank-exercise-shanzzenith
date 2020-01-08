@@ -97,6 +97,7 @@ contract SimpleBank {
         balances[user] -= withdrawAmount; 
        
       user.transfer(withdrawAmount);
+        emit LogWithdrawal(user, withdrawAmount, balances[user]);
     
         return balances[user];
     }
